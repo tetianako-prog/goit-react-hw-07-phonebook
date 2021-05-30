@@ -1,4 +1,3 @@
-//import logger from 'redux-logger';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -20,7 +19,6 @@ const middleware = [
       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
     },
   }),
-  //logger,
 ];
 
 const authPersistConfig = {
@@ -40,4 +38,5 @@ const store = configureStore({
 
 const persistor = persistStore(store);
 
-export default { store, persistor };
+const mainStore = { store, persistor };
+export default mainStore;

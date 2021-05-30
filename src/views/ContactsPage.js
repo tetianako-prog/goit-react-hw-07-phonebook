@@ -19,6 +19,7 @@ class ContactsPage extends Component {
         fluid="xl"
         style={{
           paddingTop: '20px',
+          paddingBottom: '30px',
         }}
       >
         <Row className="justify-content-md-center">

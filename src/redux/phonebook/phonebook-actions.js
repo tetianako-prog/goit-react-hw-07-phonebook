@@ -14,7 +14,7 @@ const deleteContactError = createAction('contacts/deleteError');
 
 const filterContacts = createAction('contacts/filter');
 
-export default {
+const actions = {
   fetchContactRequest,
   fetchContactSuccess,
   fetchContactError,
@@ -26,3 +26,5 @@ export default {
   deleteContactError,
   filterContacts,
 };
+
+export default actions;

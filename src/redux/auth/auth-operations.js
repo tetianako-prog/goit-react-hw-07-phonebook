@@ -16,7 +16,6 @@ const register = credentials => async dispatch => {
   dispatch(authActions.registerRequest());
   try {
     const response = await axios.post('/users/signup', credentials);
-    console.log(response);
     token.set(response.data.token);
     dispatch(authActions.registerSuccess(response.data));
   } catch (error) {
@@ -72,4 +71,6 @@ const getCurrentUser = () => async (dispatch, getState) => {
   }
 };
 
-export default { register, logIn, logOut, getCurrentUser };
+const operations = { register, logIn, logOut, getCurrentUser };
+
+export default operations;

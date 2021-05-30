@@ -2,19 +2,10 @@ import React from 'react';
 import Navigation from './Navigation';
 import AuthNav from './AuthNav';
 import { connect } from 'react-redux';
-import authSelectors from '../redux/auth/auth-selectors';
+import authSelectors from '../../redux/auth/auth-selectors';
 import UserMenu from './UserMenu';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-
-// const styles = {
-//   header: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     borderBottom: '1px solid #2A363B',
-//   },
-// };
 
 const AppBar = ({ isAuthenticated }) => (
   <Navbar bg="primary" variant="dark">
