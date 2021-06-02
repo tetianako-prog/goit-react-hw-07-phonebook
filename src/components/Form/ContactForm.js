@@ -44,7 +44,7 @@ class ContactForm extends Component {
     return (
       <Form onSubmit={this.handleSubmit} style={{ marginBottom: '40px' }}>
         <Form.Group controlId="formBasicText">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Name</Form.Label>
           <Form.Control
             className="input"
             type="text"
