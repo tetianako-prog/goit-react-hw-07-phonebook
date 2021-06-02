@@ -1,6 +1,6 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { connect } from 'react-redux';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import AppBar from './components/Navigation';
 import authOperations from './redux/auth/auth-operations';
 import PrivateRoute from './components/PrivateRoute';
@@ -39,6 +39,11 @@ class App extends Component {
               restricted
               redirectTo="/contacts"
               component={RegisterPage}
+            />
+            <Route
+              render={() => (
+                <div style={{ textAlign: 'center' }}>Page not found :(</div>
+              )}
             />
           </Switch>
         </Suspense>
